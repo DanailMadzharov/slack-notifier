@@ -1,0 +1,15 @@
+version: 1.0.0
+
+kafka:
+  bootstrap-servers:
+    - localhost:9093
+    - localhost:9094
+    - localhost:9095
+  topic: slack
+  group-id: sumup-slack-notifier-group-id
+  min-bytes: 200
+  retention-hours: 36
+  recovery:
+    topic: slack.recovery
+    group-id: sumup-slack-recovery
+    retention-hours: 36
